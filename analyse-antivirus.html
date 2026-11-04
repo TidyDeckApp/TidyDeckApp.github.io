@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analyse antivirus — TidyDeck</title>
+<meta name="description" content="Rapport d'analyse antivirus des livrables TidyDeck, avec empreintes SHA-256 et date de build.">
+<style>
+  :root { --fond:#1B2B4B; --carte:#F4F7FC; --accent:#C8610A; --etincelle:#FFD27A; }
+  body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--fond); color:#20293A; }
+  main { max-width:860px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { color:var(--carte); font-size:2rem; }
+  h1 .v { color:var(--etincelle); }
+  .carte { background:var(--carte); border-radius:12px; padding:20px 24px; margin:18px 0; }
+  h2 { margin-top:0; font-size:1.15rem; }
+  table { border-collapse:collapse; width:100%; font-size:.95rem; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #d7deea; vertical-align:top; }
+  th { color:#5a6a85; font-weight:600; }
+  code { background:#e8edf6; padding:2px 6px; border-radius:6px; word-break:break-all; font-size:.85em; }
+  .a-faire { background:#fff7e8; border-left:4px solid var(--etincelle); padding:12px 16px; border-radius:8px; }
+  a { color:var(--accent); }
+  .note { color:#5a6a85; font-size:.9rem; }
+  .badge { display:inline-block; background:var(--etincelle); color:#4a3a10; border-radius:99px; padding:2px 10px; font-size:.8rem; font-weight:600; }
+  footer { color:#9fb0cc; font-size:.85rem; margin-top:28px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🛡️ Analyse antivirus — TidyDeck <span class="v">0.6.0</span></h1>
+  <p class="note">Chaque livrable est reconstruit depuis le code source public, sans emballeur
+  (UPX désactivé) — un exécutable emballé par UPX est signalé d'office par une partie des
+  moteurs, sans même regarder ce qu'il fait. Ce n'est pas notre cas.</p>
+
+  <div class="carte">
+    <h2>Livrables analysés</h2>
+    <table>
+      <tr><th>Fichier</th><th>Taille</th><th>SHA-256</th></tr>
+      <tr>
+        <td><b>TidyDeck-0.6.0-win64.zip</b><br><span class="note">construit le 4 novembre 2026</span></td>
+        <td>11&nbsp;710&nbsp;802 o</td>
+        <td><code>12e5cc57e395299598017c2f8aacab511bb7c2c83f6506d66a3d42347c592fd0</code></td>
+      </tr>
+      <tr>
+        <td><b>TidyDeck-0.6.0.zip</b> (source)<br><span class="note">construit le 4 novembre 2026</span></td>
+        <td>437&nbsp;331 o</td>
+        <td><code>9b9458496f831b6e969371ef1a34caec5dc36b3a4603d1b6c38427eb765493b9</code></td>
+      </tr>
+    </table>
+    <p class="note">Vérifier après téléchargement :
+    <code>certutil -hashfile TidyDeck-0.6.0-win64.zip SHA256</code>. Un fichier dont
+    l'empreinte ne correspond pas ne doit pas être exécuté.</p>
+  </div>
+
+  <div class="carte">
+    <h2>Résultat VirusTotal</h2>
+    <table>
+      <tr><th>Date de l'analyse</th><td id="vt-date">__________</td></tr>
+      <tr><th>Moteurs de détection</th><td id="vt-score">___ / ___ (faux positifs compris, le cas échéant)</td></tr>
+      <tr><th>Rapport complet</th><td id="vt-link">[permalink VirusTotal]</td></tr>
+    </table>
+    <div class="a-faire">
+      <b>À compléter par l'éditeur</b> — la ré-analyse demande un compte VirusTotal :
+      <ol>
+        <li>Glisser <code>TidyDeck-0.6.0-win64.zip</code> sur <a href="https://www.virustotal.com">virustotal.com</a>
+        (ou <code>TidyDeck.exe</code> seul si un moteur signale l'exécutable en isolé).</li>
+        <li>Copier ici le nombre de détections, la date et le permalink du rapport.</li>
+        <li>Répéter après <b>chaque rebuild</b> : un rapport ne vaut que pour l'empreinte et la date indiquées.</li>
+      </ol>
+    </div>
+    <p class="note">Historique connu : un ancien signal provenait d'une compilation C# à la volée
+    (supprimée depuis). Le build actuel ne contient ni C#, ni packer, ni dépendance pip.</p>
+  </div>
+
+  <div class="carte">
+    <h2>Si Windows SmartScreen avertit</h2>
+    <p>C'est normal pour un logiciel signé par personne : SmartScreen ne connaît pas encore la
+    réputation du fichier, il ne dit pas « virus ». Vérifiez d'abord l'empreinte ci-dessus,
+    puis <b>Plus d'informations → Exécuter quand même</b>. Les faux positifs des moteurs
+    vis-à-vis d'un utilitaire qui lit le registre et manipule des caches sont documentés :
+    le code est public, chaque ligne est vérifiable.</p>
+  </div>
+
+  <footer>TidyDeck 0.6.0 · GPL-3.0 · aucune télémétrie, aucune dépendance cachée.
+  <span class="badge">build 04/11/2026</span></footer>
+</main>
+</body>
+</html>
