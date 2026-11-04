@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frequently asked questions: TidyDeck</title>
+<meta name="description" content="Answers about TidyDeck: safety, the Windows warning, what gets cleaned, how to undo, privacy.">
+<meta name="theme-color" content="#1B2B4B">
+<link rel="icon" type="image/svg+xml" href="assets/tidydeck-logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="saut" href="#content">Skip to content</a>
+
+<header class="haut">
+  <div class="enveloppe">
+    <a class="marque" href="index-en.html" aria-label="TidyDeck, home">
+      <img src="assets/tidydeck-logo.svg" alt="" width="44" height="44">
+      <div><b>Tidy</b><span>Deck</span></div>
+    </a>
+    <nav class="menu" aria-label="Main navigation">
+      <a href="index-en.html#features">Features</a>
+      <a href="index-en.html#modes">Modes</a>
+      <a href="index-en.html#download">Download</a>
+      <a href="faq-en.html" aria-current="page">FAQ</a>
+      <span class="lang-switch"><a href="faq.html" lang="fr">FR</a> | <strong>EN</strong></span>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+<div class="heros" style="padding-bottom:8px">
+  <div class="enveloppe">
+    <h1>Frequently asked questions</h1>
+    <p class="sous">Short answers. For everything else, the code is open and the app's log shows everything it does.</p>
+  </div>
+</div>
+
+<section aria-labelledby="t-trust" style="padding-top:16px">
+  <div class="enveloppe">
+    <h2 id="t-trust">Trust and safety</h2>
+
+    <details>
+      <summary>Is TidyDeck free?</summary>
+      <p>Yes, and it will stay that way. It is released under the GPL-3.0 licence: you can read the code, modify it and share it. A donation is possible, never required.</p>
+    </details>
+
+    <details>
+      <summary>How can I be sure the file is safe?</summary>
+      <p>Three checks that complement each other: the SHA-256 hash (it proves your file is identical to the one published), the VirusTotal scan (a snapshot at a given moment) and the open source code, which anyone can read. The links are on the <a href="index-en.html#download">download page</a>.</p>
+    </details>
+
+    <details id="smartscreen">
+      <summary>Windows shows "Windows protected your PC". Is that normal?</summary>
+      <p>Yes, for a small piece of software that is not yet digitally signed. This protection (SmartScreen) is wary of programs it does not know yet, without saying they are dangerous. A digital signature costs money, and this project is free.</p>
+      <p>If you have checked the SHA-256 hash, click "More info", then "Run anyway". If the hash does not match, do not run the file.</p>
+    </details>
+
+    <details>
+      <summary>My antivirus flags it. What should I do?</summary>
+      <p>This can happen with any small, recent program; it is called a false positive. Check the hash first, then look at the VirusTotal report. If an antivirus blocks it, report it on the "Report an issue" page: we will send it to the antivirus vendor for correction.</p>
+    </details>
+
+    <details>
+      <summary>Does it collect data?</summary>
+      <p>No. No account, no sign-up, no telemetry. Nothing leaves your PC. The only network access is the "Mises à jour" (check for updates) button, and it only runs if you click it.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to be an administrator?</summary>
+      <p>No, not to start. Windows only asks for administrator rights if you use a feature that truly needs them (some services, the restore point), and it is Windows itself that asks you.</p>
+    </details>
+  </div>
+</section>
+
+<section aria-labelledby="t-usage" style="padding-top:8px">
+  <div class="enveloppe">
+    <h2 id="t-usage">Day to day</h2>
+
+    <details>
+      <summary>What exactly does it clean?</summary>
+      <p>Temporary files and caches. Each line tells you what it is, where it is and the risk level, with a button to open the location. There is no registry cleaner and no "boost".</p>
+    </details>
+
+    <details>
+      <summary>Can I undo?</summary>
+      <p>Yes, except for one thing. Cleaned files are moved to quarantine for 7 days by default and you can restore them from the "Journaux" (logs) page. Startup programs are disabled, not deleted. <strong>The only exception is emptying the Recycle Bin: it is immediate and permanent.</strong></p>
+    </details>
+
+    <details>
+      <summary>What does "Calmer Windows" (Quiet Windows) do?</summary>
+      <p>It reduces suggestions, recommended apps and "Discover Windows" style messages, by changing your user settings only. Every setting can be undone: uncheck it and confirm.</p>
+    </details>
+
+    <details>
+      <summary>What is "Les plus gros fichiers" (largest files)?</summary>
+      <p>The list of the largest files and folders, in read-only mode. TidyDeck looks and shows you; it deletes nothing at this stage.</p>
+    </details>
+
+    <details>
+      <summary>What are the modes for?</summary>
+      <p>Serenity simplifies the interface and the wording. Advanced shows everything and adds options. Colorblind never uses color alone to show a state. Discreet hides your username, the PC name and personal paths on screen, handy when streaming.</p>
+    </details>
+  </div>
+</section>
+
+<section aria-labelledby="t-end" style="padding-top:8px">
+  <div class="enveloppe">
+    <h2 id="t-end">Installing and leaving</h2>
+
+    <details>
+      <summary>How do I install it?</summary>
+      <p>There is nothing to install: unzip the folder anywhere and run <code>TidyDeck.exe</code>. If you prefer a proper installer, one also exists in the project files.</p>
+    </details>
+
+    <details>
+      <summary>How do I uninstall it?</summary>
+      <p>Close TidyDeck (taskbar icon, then Quit) and delete its folder. To erase everything, also delete <code>%LOCALAPPDATA%\TidyDeck</code>.</p>
+      <p><strong>Before deleting:</strong> anything still in quarantine disappears with the folder, so recover what you want to keep. The "Calmer Windows" settings already applied stay applied: uncheck them first if you want to go back.</p>
+    </details>
+
+    <details>
+      <summary>Which versions of Windows are supported?</summary>
+      <p>Windows 10 and Windows 11.</p>
+    </details>
+
+    <details>
+      <summary>Where can I report a problem or suggest an idea?</summary>
+      <p>On the <a href="https://github.com/TidyDeckApp/tidydeckapp.github.io/issues">project's issues page</a>. Describe what you did, what you expected and what happened. A screenshot helps a lot.</p>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="bas">
+  <div class="enveloppe">
+    <div>
+      <p style="margin:0">© 2026 Florius. TidyDeck is distributed under the GPL-3.0 licence.</p>
+      <p style="margin:6px 0 0">Without any warranty, to the extent permitted by law.</p>
+    </div>
+    <ul aria-label="Useful links">
+      <li><a href="index-en.html">Home</a></li>
+      <li><a href="https://github.com/TidyDeckApp/tidydeckapp.github.io">Source code</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

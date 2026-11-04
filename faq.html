@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions fréquentes : TidyDeck</title>
+<meta name="description" content="Réponses aux questions sur TidyDeck : sécurité, avertissement Windows, ce qui est nettoyé, comment annuler, vie privée.">
+<meta name="theme-color" content="#1B2B4B">
+<link rel="icon" type="image/svg+xml" href="assets/tidydeck-logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="saut" href="#contenu">Aller au contenu</a>
+
+<header class="haut">
+  <div class="enveloppe">
+    <a class="marque" href="index.html" aria-label="TidyDeck, accueil">
+      <img src="assets/tidydeck-logo.svg" alt="" width="44" height="44">
+      <div><b>Tidy</b><span>Deck</span></div>
+    </a>
+    <nav class="menu" aria-label="Navigation principale">
+      <a href="index.html#fonctions">Ce qu'il fait</a>
+      <a href="index.html#modes">Les modes</a>
+      <a href="index.html#telecharger">Télécharger</a>
+      <a href="faq.html" aria-current="page">Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+<div class="heros" style="padding-bottom:8px">
+  <div class="enveloppe">
+    <h1>Questions fréquentes</h1>
+    <p class="sous">Les réponses courtes. Pour le reste, le code est ouvert et le journal du logiciel montre tout ce qu'il fait.</p>
+  </div>
+</div>
+
+<section aria-labelledby="t-confiance" style="padding-top:16px">
+  <div class="enveloppe">
+    <h2 id="t-confiance">Confiance et sécurité</h2>
+
+    <details>
+      <summary>TidyDeck est-il gratuit ?</summary>
+      <p>Oui, et il le restera. Il est publié sous licence GPL-3.0 : tu peux lire le code, le modifier et le partager. Un don est possible, jamais nécessaire.</p>
+    </details>
+
+    <details>
+      <summary>Comment être sûr que le fichier est sain ?</summary>
+      <p>Trois vérifications, qui se complètent : l'empreinte SHA-256 (elle prouve que ton fichier est identique à celui publié), l'analyse VirusTotal (une photo à un instant donné) et le code source ouvert, que n'importe qui peut lire. Les liens sont sur la <a href="index.html#telecharger">page de téléchargement</a>.</p>
+    </details>
+
+    <details id="smartscreen">
+      <summary>Windows affiche « Windows a protégé votre ordinateur ». C'est normal ?</summary>
+      <p>Oui, pour un petit logiciel pas encore signé numériquement. Cette protection (SmartScreen) se méfie des programmes qu'elle ne connaît pas encore, sans dire qu'ils sont dangereux. La signature numérique est payante et le projet est gratuit.</p>
+      <p>Si tu as vérifié l'empreinte SHA-256, clique sur « Informations complémentaires », puis « Exécuter quand même ». Si l'empreinte ne correspond pas, n'exécute pas le fichier.</p>
+    </details>
+
+    <details>
+      <summary>Mon antivirus le signale. Que faire ?</summary>
+      <p>Ça peut arriver avec n'importe quel petit programme récent, on appelle ça un faux positif. Vérifie d'abord l'empreinte, puis regarde le rapport VirusTotal. Si un antivirus le bloque, signale-le-nous sur la page « Signaler un problème » : nous l'enverrons à l'éditeur de l'antivirus pour correction.</p>
+    </details>
+
+    <details>
+      <summary>Collecte-t-il des données ?</summary>
+      <p>Non. Aucun compte, aucune inscription, aucune télémétrie. Rien ne quitte ton PC. Le seul accès au réseau est le bouton « Mises à jour », et il ne part que si tu cliques dessus.</p>
+    </details>
+
+    <details>
+      <summary>Faut-il être administrateur ?</summary>
+      <p>Non, pas pour démarrer. Windows ne te demande les droits administrateur que si tu utilises une fonction qui les exige vraiment (certains services, le point de restauration), et c'est Windows lui-même qui te le demande.</p>
+    </details>
+  </div>
+</section>
+
+<section aria-labelledby="t-usage" style="padding-top:8px">
+  <div class="enveloppe">
+    <h2 id="t-usage">Au quotidien</h2>
+
+    <details>
+      <summary>Que nettoie-t-il exactement ?</summary>
+      <p>Les fichiers temporaires et les caches. Chaque ligne indique ce que c'est, où ça se trouve et le niveau de risque, avec un bouton pour ouvrir l'emplacement. Il n'y a ni nettoyeur de registre ni « boost ».</p>
+    </details>
+
+    <details>
+      <summary>Puis-je annuler ?</summary>
+      <p>Oui, sauf pour une chose. Les fichiers nettoyés sont déplacés en quarantaine pendant 7 jours par défaut et tu peux les restaurer depuis la page « Journaux ». Les programmes de démarrage sont désactivés, pas supprimés. <strong>La seule exception est de vider la Corbeille : c'est immédiat et définitif.</strong></p>
+    </details>
+
+    <details>
+      <summary>Que fait « Calmer Windows » ?</summary>
+      <p>Il réduit les suggestions, les applications recommandées et les messages du type « Découvrez Windows », en modifiant tes réglages utilisateur uniquement. Chaque réglage s'annule : décoche-le et valide.</p>
+    </details>
+
+    <details>
+      <summary>Qu'est-ce que « Voir ce qui prend de la place » ?</summary>
+      <p>La liste des plus gros fichiers et dossiers, en lecture seule. TidyDeck regarde et te montre ; il ne supprime rien à cette étape.</p>
+    </details>
+
+    <details>
+      <summary>À quoi servent les modes ?</summary>
+      <p>Sérénité simplifie l'interface et les phrases. Avancé montre tout et ajoute des options. Daltonien n'utilise jamais la couleur seule pour dire un état. Discret masque ton nom d'utilisateur, le nom du PC et les chemins personnels à l'écran, utile en live.</p>
+    </details>
+  </div>
+</section>
+
+<section aria-labelledby="t-fin" style="padding-top:8px">
+  <div class="enveloppe">
+    <h2 id="t-fin">Installation et départ</h2>
+
+    <details>
+      <summary>Comment l'installer ?</summary>
+      <p>Il n'y a rien à installer : décompresse le dossier où tu veux et lance <code>TidyDeck.exe</code>. Si tu préfères un vrai programme d'installation, il existe aussi dans les fichiers du projet.</p>
+    </details>
+
+    <details>
+      <summary>Comment le désinstaller ?</summary>
+      <p>Ferme TidyDeck (icône dans la barre des tâches, puis Quitter) et supprime son dossier. Pour tout effacer, supprime aussi <code>%LOCALAPPDATA%\TidyDeck</code>.</p>
+      <p><strong>Avant de supprimer :</strong> ce qui est encore en quarantaine disparaît avec le dossier, donc récupère ce que tu veux garder. Les réglages « Calmer Windows » déjà appliqués restent appliqués : décoche-les avant si tu veux revenir en arrière.</p>
+    </details>
+
+    <details>
+      <summary>Quelles versions de Windows sont compatibles ?</summary>
+      <p>Windows 10 et Windows 11.</p>
+    </details>
+
+    <details>
+      <summary>Où signaler un problème ou proposer une idée ?</summary>
+      <!-- [À REMPLIR : lien GitHub Issues] -->
+      <p>Sur la <a href="[À REMPLIR : lien GitHub]/issues">page des signalements du projet</a>. Décris ce que tu as fait, ce que tu attendais et ce qui s'est passé. Une capture d'écran aide beaucoup.</p>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="bas">
+  <div class="enveloppe">
+    <div>
+      <p style="margin:0">© 2026 Florius. TidyDeck est distribué sous licence GPL-3.0.</p>
+      <p style="margin:6px 0 0">Sans aucune garantie, dans les limites permises par la loi.</p>
+    </div>
+    <ul aria-label="Liens utiles">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="[À REMPLIR : lien GitHub]">Code source</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
