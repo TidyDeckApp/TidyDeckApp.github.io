@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antivirus analysis — TidyDeck</title>
+<meta name="description" content="Antivirus analysis report for TidyDeck releases, with SHA-256 fingerprints and build date.">
+<style>
+  :root { --fond:#1B2B4B; --carte:#F4F7FC; --accent:#C8610A; --etincelle:#FFD27A; }
+  body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--fond); color:#20293A; }
+  main { max-width:860px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { color:var(--carte); font-size:2rem; }
+  h1 .v { color:var(--etincelle); }
+  .carte { background:var(--carte); border-radius:12px; padding:20px 24px; margin:18px 0; }
+  h2 { margin-top:0; font-size:1.15rem; }
+  table { border-collapse:collapse; width:100%; font-size:.95rem; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #d7deea; vertical-align:top; }
+  th { color:#5a6a85; font-weight:600; }
+  code { background:#e8edf6; padding:2px 6px; border-radius:6px; word-break:break-all; font-size:.85em; }
+  .a-faire { background:#fff7e8; border-left:4px solid var(--etincelle); padding:12px 16px; border-radius:8px; }
+  a { color:var(--accent); }
+  .note { color:#5a6a85; font-size:.9rem; }
+  .badge { display:inline-block; background:var(--etincelle); color:#4a3a10; border-radius:99px; padding:2px 10px; font-size:.8rem; font-weight:600; }
+  footer { color:#9fb0cc; font-size:.85rem; margin-top:28px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🛡️ Antivirus analysis — TidyDeck <span class="v">0.6.1</span></h1>
+  <p class="note"><a href="analyse-antivirus.html">Version française</a></p>
+  <p class="note">Every release file is rebuilt from public source code, with no packer
+  (UPX disabled) — an UPX-packed executable is flagged on sight by a number of engines,
+  without them even looking at what it does. That is not our case.</p>
+
+  <div class="carte">
+    <h2>Release files (0.6.1)</h2>
+    <table>
+      <tr><th>File</th><th>Size</th><th>SHA-256</th></tr>
+      <tr>
+        <td><b>TidyDeck-0.6.1-win64.zip</b><br><span class="note">built on November 5, 2026</span></td>
+        <td>11,671,446 bytes</td>
+        <td><code>55541ad9e7f91ccc10f09ab2cdfb5e78e162930758609078aa05295a1e91e03f</code></td>
+      </tr>
+      <tr>
+        <td><b>TidyDeck-0.6.1.zip</b> (source)<br><span class="note">built on November 5, 2026</span></td>
+        <td>440,293 bytes</td>
+        <td><code>5378171bc0f89cd55c77968deec4f024a528d2d9b8b192fa9a5ae5de564133e4</code></td>
+      </tr>
+    </table>
+    <p class="note">Check after download:
+    <code>certutil -hashfile TidyDeck-0.6.1-win64.zip SHA256</code>. A file whose
+    fingerprint does not match must not be run.</p>
+  </div>
+
+  <div class="carte">
+    <h2>VirusTotal result (0.6.1)</h2>
+    <table>
+      <tr><th>Analysis date</th><td id="vt-date">__________</td></tr>
+      <tr><th>Detection engines</th><td id="vt-score">___ / ___ (including false positives, if any)</td></tr>
+      <tr><th>Full report</th><td id="vt-link">[VirusTotal permalink]</td></tr>
+    </table>
+    <div class="a-faire">
+      <b>To be completed by the editor</b> — re-analysis requires a VirusTotal account:
+      <ol>
+        <li>Drop <code>TidyDeck-0.6.1-win64.zip</code> onto <a href="https://www.virustotal.com">virustotal.com</a>
+        (or <code>TidyDeck.exe</code> alone if an engine flags the standalone executable).</li>
+        <li>Paste the detection count, the date and the report permalink here.</li>
+        <li>Repeat after <b>every rebuild</b>: a report only applies to the fingerprint and date shown.</li>
+      </ol>
+    </div>
+    <p class="note">Known history: version 0.6.0
+    (<code>12e5cc57e395299598017c2f8aacab511bb7c2c83f6506d66a3d42347c592fd0</code>) was
+    analysed on November 4, 2026 with <b>0 / 70</b> engines — that report only applies to
+    that fingerprint. An older signal came from on-the-fly C# compilation (removed since).
+    The current build contains no C#, no packer, no pip dependency.</p>
+  </div>
+
+  <div class="carte">
+    <h2>Previous releases</h2>
+    <table>
+      <tr><th>File</th><th>Size</th><th>SHA-256</th></tr>
+      <tr>
+        <td><b>TidyDeck-0.6.0-win64.zip</b><br><span class="note">scanned 0/70 on 04/11/2026</span></td>
+        <td>11,710,802 bytes</td>
+        <td><code>12e5cc57e395299598017c2f8aacab511bb7c2c83f6506d66a3d42347c592fd0</code></td>
+      </tr>
+      <tr>
+        <td><b>TidyDeck-0.6.0.zip</b> (source)</td>
+        <td>437,331 bytes</td>
+        <td><code>9b9458496f831b6e969371ef1a34caec5dc36b3a4603d1b6c38427eb765493b9</code></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="carte">
+    <h2>If Windows SmartScreen warns you</h2>
+    <p>This is normal for software signed by nobody: SmartScreen does not know the file's
+    reputation yet, it is not saying “virus”. Check the fingerprint above first, then
+    <b>More info → Run anyway</b>. Engine false positives against a utility that reads the
+    registry and clears caches are well documented: the code is public, every line is
+    verifiable.</p>
+  </div>
+
+  <footer>TidyDeck 0.6.1 · GPL-3.0 · no telemetry, no hidden dependencies.
+  <span class="badge">build 2026-11-04</span></footer>
+</main>
+</body>
+</html>

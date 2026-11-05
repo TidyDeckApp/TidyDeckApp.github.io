@@ -16,7 +16,7 @@ A free, open-source Windows application designed for ADHD profiles, gamers, and 
 * **🧹 Clean:** Clear temporary files and caches with full preview visibility. Includes a **7-day quarantine system** so you can restore anything easily.
 * **🔇 Quiet Windows:** Turn off unwanted suggestions, recommended apps, and intrusive Windows notifications with single-click toggles.
 * **📊 Storage Analyzer:** View your largest files and directories in a fast, read-only view with proportional size bars.
-* **💧 Wellness & ADHD Reminders:** Gentle, non-intrusive hydration and break reminders, plus a specialized appointment timer designed to manage hyperfocus.
+* **💧 Wellbeing & ADHD Reminders:** Gentle, non-intrusive hydration and break reminders, plus a specialized appointment timer designed to manage hyperfocus.
 * **♿ Accessibility First:** Features dedicated modes for **Colorblind** users, **Serenity** (simplified view), **Advanced**, and **Discreet** (hides personal info during streaming).
 
 ---
@@ -30,9 +30,9 @@ A free, open-source Windows application designed for ADHD profiles, gamers, and 
 
 ---
 
-## 📥 Download (v0.6.0)
+## 📥 Download (v0.6.1)
 
-1. Download the latest release: [**TidyDeck-0.6.0-win64.zip**](https://github.com/TidyDeckApp/tidydeckapp.github.io/releases/download/v0.6.0/TidyDeck-0.6.0-win64.zip)
+1. Download the latest release: [**TidyDeck-0.6.1-win64.zip**](https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1-win64.zip)
 2. Unzip the `TidyDeck` folder anywhere on your computer (e.g., `C:\TidyDeck`).
 3. Run `TidyDeck.exe`. *No installation required!* To uninstall, simply delete the folder.
 
@@ -41,12 +41,12 @@ A free, open-source Windows application designed for ADHD profiles, gamers, and 
 To confirm your download is authentic, run this command in Windows Command Prompt or PowerShell:
 
 ```powershell
-certutil -hashfile TidyDeck-0.6.0-win64.zip SHA256
+certutil -hashfile TidyDeck-0.6.1-win64.zip SHA256
 ```
 
 **Expected Hash:**
 ```text
-accf3261bc9a8f6fb2ed249bab2cb4b41ddb10906092693ce9f4de09e6113840
+55541ad9e7f91ccc10f09ab2cdfb5e78e162930758609078aa05295a1e91e03f
 ```
 
 ---
