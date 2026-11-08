@@ -56,7 +56,7 @@ nav.menu a { color: var(--texte); text-decoration: none; padding: 10px 4px; min-
 nav.menu a:hover { text-decoration: underline; }
 
 .heros { padding: 56px 0 40px; }
-.heros h1 { margin: 0 0 18px; font-size: clamp(34px, 6vw, 56px); line-height: 1.1; letter-spacing: -0.5px; color: var(--marine); max-width: 18ch; }
+.heros h1 { margin: 0 0 14px; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.3px; color: var(--marine); max-width: 26ch; }
 .heros p.sous { font-size: 21px; color: var(--doux); max-width: 46ch; margin: 0 0 28px; }
 .actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .bouton { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 26px; border-radius: 12px; font-weight: 700; font-size: 18px; text-decoration: none; background: var(--bouton); color: var(--bouton-texte); border: 2px solid var(--bouton); }
