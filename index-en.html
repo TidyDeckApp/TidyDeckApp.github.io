@@ -206,14 +206,15 @@
     <div class="telecharger">
       <h3>1. Get the file</h3>
       <p><a class="bouton" href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1-win64.zip">TidyDeck-0.6.1-win64.zip</a></p>
-      <p>Extract the <code>TidyDeck</code> folder wherever you like (for instance <code>C:\TidyDeck</code>) and double-click <code>TidyDeck.exe</code>. To uninstall: simply delete the folder.</p>
+      <p>Once the fingerprint is verified (step 2), extract the <code>TidyDeck</code> folder wherever you like (for instance <code>C:\TidyDeck</code>) and double-click <code>TidyDeck.exe</code>. To uninstall: simply delete the folder.</p>
 
       <h3>2. Verify file integrity</h3>
       <p><code>TidyDeck-0.6.1-win64.zip</code> (12,032,934 bytes). Expected SHA-256 fingerprint:</p>
       <pre class="empreinte"><code>d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6</code></pre>
-      <p>On your PC, in a command prompt:</p>
-      <pre><code>certutil -hashfile "Downloads\TidyDeck-0.6.1-win64.zip" SHA256</code></pre>
-      <p>If the result differs, do not open the file.</p>
+      <p>For this step, leave the zip in your <strong>Downloads</strong> folder. Open the Start menu, type <code>cmd</code>, press Enter, then paste this line and press Enter:</p>
+      <pre><code>certutil -hashfile "%USERPROFILE%\Downloads\TidyDeck-0.6.1-win64.zip" SHA256</code></pre>
+      <p>The middle line must match the fingerprint above. If the result differs, do not open the file.</p>
+      <p>Did your browser save the file elsewhere? Press <code>Ctrl+J</code> in the browser, right-click the file, choose "Open folder location", and move it back to Downloads. Once verified, you can move and extract it anywhere you want.</p>
       <p>Source code archive: <a href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1.zip">TidyDeck-0.6.1.zip</a> (470,144 bytes), expected fingerprint <code>422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8</code>.</p>
 
       <h3>3. Check the antivirus analysis</h3>

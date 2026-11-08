@@ -206,14 +206,15 @@
     <div class="telecharger">
       <h3>1. Récupère le fichier</h3>
       <p><a class="bouton" href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1-win64.zip">TidyDeck-0.6.1-win64.zip</a></p>
-      <p>Décompresse le dossier <code>TidyDeck</code> où tu veux (par exemple <code>C:\TidyDeck</code>) et double-clique sur <code>TidyDeck.exe</code>. Pour le retirer : supprime le dossier.</p>
+      <p>Une fois l'empreinte vérifiée (étape 2), décompresse le dossier <code>TidyDeck</code> où tu veux (par exemple <code>C:\TidyDeck</code>) et double-clique sur <code>TidyDeck.exe</code>. Pour le retirer : supprime le dossier.</p>
 
       <h3>2. Vérifie que le fichier est intact</h3>
       <p><code>TidyDeck-0.6.1-win64.zip</code> (12&nbsp;032&nbsp;934 octets). Empreinte SHA-256 attendue :</p>
       <pre class="empreinte"><code>d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6</code></pre>
-      <p>Sur ton PC, dans une invite de commandes :</p>
-      <pre><code>certutil -hashfile "Downloads\TidyDeck-0.6.1-win64.zip" SHA256</code></pre>
-      <p>Si le résultat est différent, n’ouvre pas le fichier.</p>
+      <p>Pour cette étape, laisse le zip dans ton dossier <strong>Téléchargements</strong> (son vrai nom reste <code>Downloads</code>, même en français). Ouvre le menu Démarrer, tape <code>cmd</code>, fais Entrée, puis colle cette ligne et fais Entrée :</p>
+      <pre><code>certutil -hashfile "%USERPROFILE%\Downloads\TidyDeck-0.6.1-win64.zip" SHA256</code></pre>
+      <p>La ligne du milieu doit correspondre à l'empreinte ci-dessus. Si le résultat est différent, n’ouvre pas le fichier.</p>
+      <p>Ton navigateur a rangé le fichier ailleurs ? Fais <code>Ctrl+J</code> dans le navigateur, clic droit sur le fichier, puis « Ouvrir l'emplacement du fichier », et replace-le dans Téléchargements. Une fois vérifié, tu peux le déplacer et le décompresser où tu veux.</p>
       <p>Archive du code source : <a href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1.zip">TidyDeck-0.6.1.zip</a> (470&nbsp;144 octets), empreinte attendue <code>422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8</code>.</p>
 
       <h3>3. Regarde l'analyse antivirus</h3>
