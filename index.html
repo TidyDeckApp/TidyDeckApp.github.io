@@ -3,9 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TidyDeck : nettoyer, ranger et calmer Windows</title>
-<meta name="description" content="TidyDeck nettoie les fichiers temporaires et calme les publicités et notifications de Windows. Gratuit, libre, sans compte ni collecte. Pensé pour les profils TDAH, les gamers et les daltoniens.">
+<title>TidyDeck : nettoie, range et calme ton PC, sans rien casser</title>
+<meta name="description" content="TidyDeck nettoie les fichiers temporaires et calme les publicités et notifications de Windows. Gratuit, libre, sans compte ni collecte. Conçu avec les profils TDAH, les gamers et les daltoniens.">
 <meta name="theme-color" content="#1B2B4B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TidyDeck : nettoie, range et calme ton PC, sans rien casser et sans te juger">
+<meta property="og:description" content="Un nettoyeur de PC gratuit et libre qui te montre tout avant d'agir. Windows 10 et 11, sans compte ni collecte.">
+<meta property="og:image" content="https://tidydeckapp.github.io/assets/tidydeck-og.png">
+<meta property="og:url" content="https://tidydeckapp.github.io/index.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="TidyDeck">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TidyDeck : nettoie, range et calme ton PC, sans rien casser et sans te juger">
+<meta name="twitter:description" content="Un nettoyeur de PC gratuit et libre qui te montre tout avant d'agir. Windows 10 et 11, sans compte ni collecte.">
+<meta name="twitter:image" content="https://tidydeckapp.github.io/assets/tidydeck-og.png">
 <link rel="icon" type="image/svg+xml" href="assets/tidydeck-logo.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
 <link rel="stylesheet" href="style.css">
@@ -33,8 +44,8 @@
 
 <div class="heros">
   <div class="enveloppe">
-    <h1>Nettoyer, ranger et calmer Windows.</h1>
-    <p class="sous">Un logiciel gratuit qui montre avant d'agir, range sans rien supprimer d'un coup, et fait taire ce qui te distrait.</p>
+    <h1>Nettoie, range et calme ton PC, sans rien casser et sans te juger.</h1>
+    <p class="sous">Un nettoyeur de PC qui te montre tout avant d'agir.</p>
     <div class="actions">
       <a class="bouton" href="#telecharger">Télécharger pour Windows</a>
       <a class="bouton second" href="https://github.com/TidyDeckApp/TidyDeckApp">Voir le code</a>
@@ -45,14 +56,16 @@
       <li>Windows 10 et 11</li>
       <li>Rien à installer</li>
     </ul>
+    <figure class="capture" style="margin-top:32px">
+      <img src="assets/captures/accueil.png" alt="Page d'accueil de TidyDeck : le bouton « Ranger mon PC en douceur » au centre, les trois promesses en dessous" width="1000" height="650">
+      <figcaption>L'écran d'accueil : un bouton pour lancer le rangement, rien de plus pour démarrer.</figcaption>
+    </figure>
   </div>
 </div>
 
 <section aria-labelledby="t-pourquoi">
   <div class="enveloppe texte-etroit histoire">
-    <h2 id="t-pourquoi">Pourquoi j’ai fait TidyDeck</h2>
-    <div class="court">
-      <p>Je savais que quelque chose n’allait pas, sans savoir que ça s’appelait TDAH. Ça m’a gêné absolument toute ma vie : à l’école, dans les relations sociales, au travail.</p>
+    <h2 id="t-pourquoi">Pourquoi j’ai fait TDAH, sans savoir que ça s’appelait TDAH. Ça m’a gêné absolument toute ma vie : à l’école, dans les relations sociales, au travail.</p>
       <p>J’ai eu l’idée de ce logiciel peu après mon diagnostic, pour les gamers, les TDAH et les daltoniens. Il m’aide à jouer sans avoir peur de rater mon rendez-vous, sans être frustré toute la journée en stand-by.</p>
     </div>
     <details id="histoire">
@@ -68,6 +81,26 @@
         <p><button type="button" class="reduire" onclick="var d=document.getElementById('histoire');d.open=false;document.getElementById('t-pourquoi').scrollIntoView();">Réduire</button></p>
       </div>
     </details>
+  </div>
+</section>
+
+<section aria-labelledby="t-piliers">
+  <div class="enveloppe">
+    <h2 id="t-piliers">Trois promesses</h2>
+    <div class="grille">
+      <div class="carte">
+        <h3>Tu vois avant d'agir</h3>
+        <p>Chaque liste est montrée, avec les chemins réels, avant toute confirmation.</p>
+      </div>
+      <div class="carte">
+        <h3>Tout s'annule pendant 7 jours</h3>
+        <p>Ce qui est rangé est mis de côté, restaurable en un clic depuis « Journaux ».</p>
+      </div>
+      <div class="carte">
+        <h3>Rien ne sort de ton PC</h3>
+        <p>Aucun compte, aucune télémétrie. Le seul accès réseau est le bouton « Mises à jour », si tu cliques.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -101,25 +134,37 @@
 
     <div class="bloc">
       <div class="bloc-texte">
-        <h3>Voir ce qui prend de la place</h3>
-        <p>Les plus gros fichiers et dossiers, en lecture seule.</p>
+        <h3>Les plus gros fichiers</h3>
+        <p>La liste des plus gros fichiers et dossiers, en lecture seule.</p>
         <p>TidyDeck te montre. Il ne supprime rien pendant qu'il regarde.</p>
       </div>
       <figure class="capture">
-        <img src="assets/captures/gros-fichiers.png" alt="La liste des plus gros fichiers" width="1000" height="649" loading="lazy">
+        <img src="assets/captures/gros-fichiers.png" alt="La page Les plus gros fichiers de TidyDeck" width="1000" height="649" loading="lazy">
         <figcaption>Une barre proportionnelle : la longueur dit la taille, pas la couleur.</figcaption>
       </figure>
     </div>
 
     <div class="bloc inverse">
-      <div class="bloc-texte" style="width: 100%;">
+      <div class="bloc-texte">
+        <h3>Démarrage</h3>
+        <p>Un conseil sur chaque programme lancé avec Windows : lequel désactiver sans risque, et pourquoi.</p>
+        <p>Rien ne change sans ton accord, et chaque changement s'annule.</p>
+      </div>
+      <figure class="capture">
+        <img src="assets/captures/demarrage.png" alt="La page Démarrage de TidyDeck, avec un conseil d'une ligne à côté de chaque programme" width="1000" height="650" loading="lazy">
+        <figcaption>La page Démarrage : une ligne, un conseil, un clic pour décider.</figcaption>
+      </figure>
+    </div>
+
+    <div class="bloc">
+      <div class="bloc-texte">
         <h3>Rappels bien-être</h3>
         <p>Des notifications douces pour faire une pause, s'hydrater ou lâcher l'écran, pensées pour ne pas couper brutalement ta concentration.</p>
         <p>Entièrement paramétrables ou désactivables selon tes envies du moment, avec en prime un minuteur de rendez-vous conçu pour les profils TDAH.</p>
       </div>
     </div>
 
-    <p class="aussi">Et aussi : un journal de tout ce qui a été fait et un mode spécial pour le jeu et le live.</p>
+    <p class="aussi">Et aussi : un journal de tout ce qui a été fait, et un mode « Jeu et live » — les rappels attendent la fin de ta partie.</p>
   </div>
 </section>
 
@@ -127,7 +172,7 @@
   <div class="enveloppe texte-etroit">
     <h2 id="t-promesses">Ce qu'il ne fait pas</h2>
     <ul class="liste-nette">
-      <li>Pas de « nettoyeur de registre », pas de « boost » miracle.</li>
+      <li>Pas de « nettoyeur de registre », pas de promesses miracles.</li>
       <li>Pas de compte, pas de publicité, pas de télémétrie.</li>
       <li>Pas de service, de tâche planifiée ni de pilote installés.</li>
       <li>Aucune donnée envoyée. Le seul accès au réseau est le bouton « Mises à jour », et seulement si tu cliques.</li>
@@ -146,32 +191,54 @@
       <div><dt>Daltonien</dt><dd>Un symbole, un mot et une différence de luminosité pour chaque état. Jamais la couleur seule.</dd></div>
       <div><dt>Discret</dt><dd>Masque à l'écran ton nom d'utilisateur, le nom du PC et les chemins personnels. Pratique en live.</dd></div>
     </dl>
+    <figure class="capture" style="margin-top:24px">
+      <img src="assets/captures/serenite-fin.png" alt="Fin de nettoyage en mode Sérénité : un message rassurant au lieu des chiffres" width="1000" height="650" loading="lazy">
+      <figcaption>Mode Sérénité : à la fin d'un nettoyage, des mots rassurants plutôt que des chiffres.</figcaption>
+    </figure>
   </div>
 </section>
 
 <section id="telecharger" aria-labelledby="t-dl">
   <div class="enveloppe">
     <h2 id="t-dl">Télécharger</h2>
-    <p class="intro">Version 0.6.1 pour Windows 10 et 11. Aucun droit administrateur au démarrage.</p>
+    <p class="intro">Version 0.6.1 pour Windows 10 et 11, construite le 7 novembre 2026. Aucun droit administrateur au démarrage.</p>
     <div class="telecharger">
       <h3>1. Récupère le fichier</h3>
       <p><a class="bouton" href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1-win64.zip">TidyDeck-0.6.1-win64.zip</a></p>
       <p>Décompresse le dossier <code>TidyDeck</code> où tu veux (par exemple <code>C:\TidyDeck</code>) et double-clique sur <code>TidyDeck.exe</code>. Pour le retirer : supprime le dossier.</p>
 
       <h3>2. Vérifie que le fichier est intact</h3>
-      <p>Empreinte SHA-256 attendue :</p>
-      <pre class="empreinte"><code>55541ad9e7f91ccc10f09ab2cdfb5e78e162930758609078aa05295a1e91e03f</code></pre>
+      <p><code>TidyDeck-0.6.1-win64.zip</code> (12&nbsp;032&nbsp;934 octets). Empreinte SHA-256 attendue :</p>
+      <pre class="empreinte"><code>d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6</code></pre>
       <p>Sur ton PC, dans une invite de commandes :</p>
       <pre><code>certutil -hashfile "Downloads\TidyDeck-0.6.1-win64.zip" SHA256</code></pre>
       <p>Si le résultat est différent, n’ouvre pas le fichier.</p>
+      <p>Archive du code source : <a href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1.zip">TidyDeck-0.6.1.zip</a> (470&nbsp;144 octets), empreinte attendue <code>422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8</code>.</p>
 
       <h3>3. Regarde l'analyse antivirus</h3>
-      <p>La version 0.6.1 est en cours de ré-analyse sur VirusTotal : empreintes et rapport sur <a href="analyse-antivirus.html" target="_blank">l'analyse antivirus</a>.</p>
+      <p>VirusTotal, analyse du 7 novembre 2026 : <b>0 moteur sur 44</b> pour le win64 (<a href="https://www.virustotal.com/gui/file/d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6/detection" rel="noopener">rapport</a>) et <b>0 moteur sur 64</b> pour l'archive source (<a href="https://www.virustotal.com/gui/file/422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8/detection" rel="noopener">rapport</a>). Détails sur <a href="analyse-antivirus.html" target="_blank">l'analyse antivirus</a>.</p>
       <p>Un score est une photo à un instant donné, pas une garantie. C'est pour cela que le code est ouvert.</p>
 
       <h3>Un avertissement de Windows ?</h3>
       <p>TidyDeck n'est pas encore signé numériquement. Windows (SmartScreen) peut afficher « Windows a protégé votre ordinateur ». Si tu as vérifié l'empreinte, choisis « Informations complémentaires », puis « Exécuter quand même ». Détails dans la <a href="faq.html#smartscreen">FAQ</a>.</p>
     </div>
+  </div>
+</section>
+
+<section aria-labelledby="t-nouveautes">
+  <div class="enveloppe texte-etroit">
+    <h2 id="t-nouveautes">Nouveautés</h2>
+    <h3 style="margin:0 0 8px;font-size:20px;color:var(--marine)">0.6.1 — publiée le 7 novembre 2026</h3>
+    <ul class="liste-nette">
+      <li>Disponible en anglais, en entier.</li>
+      <li>Mises à jour plus claires : un bouton vérifie la version publiée et t'ouvre la page de téléchargement.</li>
+      <li>Tu choisis où ça se réduit : à côté de l'horloge, si tu veux.</li>
+      <li>Des conseils sur chaque programme de démarrage, pour savoir lequel désactiver sans risque.</li>
+      <li>Mode Sérénité : une fin de nettoyage avec des mots rassurants à la place des chiffres.</li>
+      <li>Plus de prudence avec les jeux : les dossiers pouvant contenir des sauvegardes ne sont jamais proposés.</li>
+      <li>Plus rapide à l'ouverture sur mon PC, et de nombreux petits correctifs.</li>
+    </ul>
+    <p>Toutes les versions et archives : <a href="https://github.com/TidyDeckApp/TidyDeckApp/releases">la page des versions sur GitHub</a>.</p>
   </div>
 </section>
 

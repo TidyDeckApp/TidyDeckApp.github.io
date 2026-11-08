@@ -28,8 +28,8 @@
 <main>
   <h1>🛡️ Analyse antivirus — TidyDeck <span class="v">0.6.1</span></h1>
   <p class="note"><a href="analyse-antivirus-en.html">English version</a></p>
-  <p class="note">Chaque livrable est reconstruit depuis le code source public, sans emballeur
-  (UPX désactivé) — un exécutable emballé par UPX est signalé d'office par une partie des
+  <p class="note">Chaque livrable est reconstruit depuis le code source public, sans compresseur
+  d'exécutable (UPX désactivé) — un exécutable compressé par UPX est signalé d'office par une partie des
   moteurs, sans même regarder ce qu'il fait. Ce n'est pas notre cas.</p>
 
   <div class="carte">
@@ -37,14 +37,14 @@
     <table>
       <tr><th>Fichier</th><th>Taille</th><th>SHA-256</th></tr>
       <tr>
-        <td><b>TidyDeck-0.6.1-win64.zip</b><br><span class="note">construit le 5 novembre 2026</span></td>
-        <td>11&nbsp;671&nbsp;446 o</td>
-        <td><code>55541ad9e7f91ccc10f09ab2cdfb5e78e162930758609078aa05295a1e91e03f</code></td>
+        <td><b>TidyDeck-0.6.1-win64.zip</b><br><span class="note">construit le 7 novembre 2026</span></td>
+        <td>12&nbsp;032&nbsp;934 o</td>
+        <td><code>d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6</code></td>
       </tr>
       <tr>
-        <td><b>TidyDeck-0.6.1.zip</b> (source)<br><span class="note">construit le 5 novembre 2026</span></td>
-        <td>440&nbsp;293 o</td>
-        <td><code>5378171bc0f89cd55c77968deec4f024a528d2d9b8b192fa9a5ae5de564133e4</code></td>
+        <td><b>TidyDeck-0.6.1.zip</b> (source)<br><span class="note">construit le 7 novembre 2026</span></td>
+        <td>470&nbsp;144 o</td>
+        <td><code>422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8</code></td>
       </tr>
     </table>
     <p class="note">Vérifier après téléchargement :
@@ -55,24 +55,29 @@
   <div class="carte">
     <h2>Résultat VirusTotal (0.6.1)</h2>
     <table>
-      <tr><th>Date de l'analyse</th><td id="vt-date">__________</td></tr>
-      <tr><th>Moteurs de détection</th><td id="vt-score">___ / ___ (faux positifs compris, le cas échéant)</td></tr>
-      <tr><th>Rapport complet</th><td id="vt-link">[permalink VirusTotal]</td></tr>
+      <tr><th>Fichier</th><th>Date de l'analyse</th><th>Moteurs de détection</th><th>Rapport complet</th></tr>
+      <tr>
+        <td><b>TidyDeck-0.6.1-win64.zip</b></td>
+        <td>7 novembre 2026</td>
+        <td><b>0</b> moteur sur <b>44</b></td>
+        <td><a href="https://www.virustotal.com/gui/file/d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6/detection" rel="noopener">rapport VirusTotal</a></td>
+      </tr>
+      <tr>
+        <td><b>TidyDeck-0.6.1.zip</b> (source)</td>
+        <td>7 novembre 2026</td>
+        <td><b>0</b> moteur sur <b>64</b></td>
+        <td><a href="https://www.virustotal.com/gui/file/422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8/detection" rel="noopener">rapport VirusTotal</a></td>
+      </tr>
     </table>
-    <div class="a-faire">
-      <b>À compléter par l'éditeur</b> — la ré-analyse demande un compte VirusTotal :
-      <ol>
-        <li>Glisser <code>TidyDeck-0.6.1-win64.zip</code> sur <a href="https://www.virustotal.com">virustotal.com</a>
-        (ou <code>TidyDeck.exe</code> seul si un moteur signale l'exécutable en isolé).</li>
-        <li>Copier ici le nombre de détections, la date et le permalink du rapport.</li>
-        <li>Répéter après <b>chaque rebuild</b> : un rapport ne vaut que pour l'empreinte et la date indiquées.</li>
-      </ol>
-    </div>
+    <p class="note">Un rapport VirusTotal est un instantané daté, pas une garantie :
+    les moteurs évoluent chaque jour. C'est pour cela que le code est ouvert et que
+    chaque fichier est vérifiable par son empreinte SHA-256.</p>
     <p class="note">Historique connu : la version 0.6.0
     (<code>12e5cc57e395299598017c2f8aacab511bb7c2c83f6506d66a3d42347c592fd0</code>) a été
     analysée le 04/11/2026 avec <b>0 / 70</b> moteurs — ce rapport ne vaut que pour cette
     empreinte. Un ancien signal, plus vieux, provenait d'une compilation C# à la volée
-    (supprimée depuis). Le build actuel ne contient ni C#, ni packer, ni dépendance pip.</p>
+    (supprimée depuis). Le build actuel ne contient aucun code C#, aucun compresseur
+    d'exécutable (UPX désactivé) et aucune dépendance pip.</p>
   </div>
 
   <div class="carte">
@@ -102,7 +107,7 @@
   </div>
 
   <footer>TidyDeck 0.6.1 · GPL-3.0 · aucune télémétrie, aucune dépendance cachée.
-  <span class="badge">build 04/11/2026</span></footer>
+  <span class="badge">build 07/11/2026</span></footer>
 </main>
 </body>
 </html>

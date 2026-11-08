@@ -14,8 +14,8 @@ A free, open-source Windows application designed for ADHD profiles, gamers, and 
 ## ✨ Features
 
 * **🧹 Clean:** Clear temporary files and caches with full preview visibility. Includes a **7-day quarantine system** so you can restore anything easily.
-* **🔇 Quiet Windows:** Turn off unwanted suggestions, recommended apps, and intrusive Windows notifications with single-click toggles.
-* **📊 Storage Analyzer:** View your largest files and directories in a fast, read-only view with proportional size bars.
+* **🔇 Calm Windows:** Turn off unwanted suggestions, recommended apps, and intrusive Windows notifications with single-click toggles.
+* **📊 Largest files:** View your largest files and directories in a fast, read-only view with proportional size bars.
 * **💧 Wellbeing & ADHD Reminders:** Gentle, non-intrusive hydration and break reminders, plus a specialized appointment timer designed to manage hyperfocus.
 * **♿ Accessibility First:** Features dedicated modes for **Colorblind** users, **Serenity** (simplified view), **Advanced**, and **Discreet** (hides personal info during streaming).
 
@@ -23,7 +23,7 @@ A free, open-source Windows application designed for ADHD profiles, gamers, and 
 
 ## 🛡️ Our Guarantees (What TidyDeck DOES NOT Do)
 
-* ❌ No "registry cleaning" or fake performance boosters.
+* ❌ No "registry cleaning", no miracle performance promises.
 * ❌ No user accounts, tracking, or telemetry data collected.
 * ❌ No background services, scheduled tasks, or custom drivers installed.
 * ❌ No auto-deletions without confirmation (only emptying the Recycle Bin is permanent).
@@ -46,8 +46,18 @@ certutil -hashfile TidyDeck-0.6.1-win64.zip SHA256
 
 **Expected Hash:**
 ```text
-55541ad9e7f91ccc10f09ab2cdfb5e78e162930758609078aa05295a1e91e03f
+d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6
 ```
+
+Size: 12,032,934 bytes. VirusTotal (November 7, 2026): **0 engine out of 44** — [report](https://www.virustotal.com/gui/file/d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6/detection).
+
+Source archive [**TidyDeck-0.6.1.zip**](https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1.zip) (470,144 bytes):
+
+```text
+422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8
+```
+
+VirusTotal (November 7, 2026): **0 engine out of 64** — [report](https://www.virustotal.com/gui/file/422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8/detection). A VirusTotal report is a dated snapshot, not a guarantee.
 
 ---
 

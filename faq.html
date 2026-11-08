@@ -6,6 +6,17 @@
 <title>Questions fréquentes : TidyDeck</title>
 <meta name="description" content="Réponses aux questions sur TidyDeck : sécurité, avertissement Windows, ce qui est nettoyé, comment annuler, vie privée.">
 <meta name="theme-color" content="#1B2B4B">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Questions fréquentes — TidyDeck">
+<meta property="og:description" content="Réponses courtes : sécurité, avertissement Windows, ce qui est nettoyé, comment annuler, vie privée.">
+<meta property="og:image" content="https://tidydeckapp.github.io/assets/tidydeck-og.png">
+<meta property="og:url" content="https://tidydeckapp.github.io/faq.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="TidyDeck">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Questions fréquentes — TidyDeck">
+<meta name="twitter:description" content="Réponses courtes : sécurité, avertissement Windows, ce qui est nettoyé, comment annuler, vie privée.">
+<meta name="twitter:image" content="https://tidydeckapp.github.io/assets/tidydeck-og.png">
 <link rel="icon" type="image/svg+xml" href="assets/tidydeck-logo.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
 <link rel="stylesheet" href="style.css">
@@ -24,6 +35,7 @@
       <a href="index.html#modes">Les modes</a>
       <a href="index.html#telecharger">Télécharger</a>
       <a href="faq.html" aria-current="page">Questions</a>
+      <span class="lang-switch"><strong>FR</strong> | <a href="faq-en.html" lang="en">EN</a></span>
     </nav>
   </div>
 </header>
@@ -64,6 +76,7 @@
     <details>
       <summary>Collecte-t-il des données ?</summary>
       <p>Non. Aucun compte, aucune inscription, aucune télémétrie. Rien ne quitte ton PC. Le seul accès au réseau est le bouton « Mises à jour » : sur clic, il vérifie la version publiée et te propose d'ouvrir la page de téléchargement. Rien n'est téléchargé ni installé tout seul.</p>
+      <p>En cas de panne, TidyDeck note l'erreur dans un petit fichier local, <code>%LOCALAPPDATA%\TidyDeck\debug.log</code>, pour comprendre ce qui a cassé. Les chemins y sont anonymisés (ton dossier personnel apparaît comme <code>%USERPROFILE%</code>) et ce fichier ne quitte jamais ton PC.</p>
     </details>
 
     <details>
@@ -79,7 +92,7 @@
 
     <details>
       <summary>Que nettoie-t-il exactement ?</summary>
-      <p>Les fichiers temporaires et les caches. Chaque ligne indique ce que c'est, où ça se trouve et le niveau de risque, avec un bouton pour ouvrir l'emplacement. Il n'y a ni nettoyeur de registre ni « boost ».</p>
+      <p>Les fichiers temporaires et les caches. Chaque ligne indique ce que c'est, où ça se trouve et le niveau de risque, avec un bouton pour ouvrir l'emplacement. Il n'y a pas de nettoyeur de registre.</p>
     </details>
 
     <details>
@@ -93,7 +106,7 @@
     </details>
 
     <details>
-      <summary>Qu'est-ce que « Voir ce qui prend de la place » ?</summary>
+      <summary>Que fait « Les plus gros fichiers » ?</summary>
       <p>La liste des plus gros fichiers et dossiers, en lecture seule. TidyDeck regarde et te montre ; il ne supprime rien à cette étape.</p>
     </details>
 
@@ -126,8 +139,7 @@
 
     <details>
       <summary>Où signaler un problème ou proposer une idée ?</summary>
-      <!-- [À REMPLIR : lien GitHub Issues] -->
-      <p>Sur la <a href="[À REMPLIR : lien GitHub]/issues">page des signalements du projet</a>. Décris ce que tu as fait, ce que tu attendais et ce qui s'est passé. Une capture d'écran aide beaucoup.</p>
+      <p>Sur la <a href="https://github.com/TidyDeckApp/TidyDeckApp/issues">page des signalements du projet</a>. Décris ce que tu as fait, ce que tu attendais et ce qui s'est passé. Une capture d'écran aide beaucoup.</p>
     </details>
   </div>
 </section>
@@ -141,7 +153,7 @@
     </div>
     <ul aria-label="Liens utiles">
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="[À REMPLIR : lien GitHub]">Code source</a></li>
+      <li><a href="https://github.com/TidyDeckApp/TidyDeckApp">Code source</a></li>
     </ul>
   </div>
 </footer>
