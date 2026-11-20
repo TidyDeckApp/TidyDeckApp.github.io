@@ -26,47 +26,47 @@
 </head>
 <body>
 <main>
-  <h1>🛡️ Antivirus analysis — TidyDeck <span class="v">0.6.1</span></h1>
+  <h1>🛡️ Antivirus analysis — TidyDeck <span class="v">0.6.2</span></h1>
   <p class="note"><a href="analyse-antivirus.html">Version française</a></p>
   <p class="note">Every release file is rebuilt from public source code, with no executable
   packer (UPX disabled) — an UPX-packed executable is flagged on sight by a number of engines,
   without them even looking at what it does. That is not our case.</p>
 
   <div class="carte">
-    <h2>Release files (0.6.1)</h2>
+    <h2>Release files (0.6.2)</h2>
     <table>
       <tr><th>File</th><th>Size</th><th>SHA-256</th></tr>
       <tr>
-        <td><b>TidyDeck-0.6.1-win64.zip</b><br><span class="note">built on November 7, 2026</span></td>
-        <td>12,032,934 bytes</td>
-        <td><code>d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6</code></td>
+        <td><b>TidyDeck-0.6.2-win64.zip</b><br><span class="note">built on November 20, 2026</span></td>
+        <td>12,046,659 bytes</td>
+        <td><code>669cdf877344dc7724c133459bd054abab2df7939890a5c2da9c3b4ee4916cd0</code></td>
       </tr>
       <tr>
-        <td><b>TidyDeck-0.6.1.zip</b> (source)<br><span class="note">built on November 7, 2026</span></td>
-        <td>470,144 bytes</td>
-        <td><code>422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8</code></td>
+        <td><b>TidyDeck-0.6.2.zip</b> (source)<br><span class="note">built on November 20, 2026</span></td>
+        <td>485,744 bytes</td>
+        <td><code>2feb56baa9bb84ae4316699ef03c3194c5df966f6d70c7eb94247e374195579e</code></td>
       </tr>
     </table>
     <p class="note">Check after download:
-    <code>certutil -hashfile TidyDeck-0.6.1-win64.zip SHA256</code>. A file whose
+    <code>certutil -hashfile TidyDeck-0.6.2-win64.zip SHA256</code>. A file whose
     fingerprint does not match must not be run.</p>
   </div>
 
   <div class="carte">
-    <h2>VirusTotal result (0.6.1)</h2>
+    <h2>VirusTotal result (0.6.2)</h2>
     <table>
       <tr><th>File</th><th>Analysis date</th><th>Detection engines</th><th>Full report</th></tr>
       <tr>
-        <td><b>TidyDeck-0.6.1-win64.zip</b></td>
-        <td>November 7, 2026</td>
-        <td><b>0</b> engine out of <b>44</b></td>
-        <td><a href="https://www.virustotal.com/gui/file/d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6/detection" rel="noopener">VirusTotal report</a></td>
+        <td><b>TidyDeck-0.6.2-win64.zip</b></td>
+        <td>November 20, 2026</td>
+        <td><b>0</b> engine out of <b>63</b></td>
+        <td><a href="https://www.virustotal.com/gui/file/669cdf877344dc7724c133459bd054abab2df7939890a5c2da9c3b4ee4916cd0/detection" rel="noopener">VirusTotal report</a></td>
       </tr>
       <tr>
-        <td><b>TidyDeck-0.6.1.zip</b> (source)</td>
-        <td>November 7, 2026</td>
+        <td><b>TidyDeck-0.6.2.zip</b> (source)</td>
+        <td>November 20, 2026</td>
         <td><b>0</b> engine out of <b>64</b></td>
-        <td><a href="https://www.virustotal.com/gui/file/422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8/detection" rel="noopener">VirusTotal report</a></td>
+        <td><a href="https://www.virustotal.com/gui/file/2feb56baa9bb84ae4316699ef03c3194c5df966f6d70c7eb94247e374195579e/detection" rel="noopener">VirusTotal report</a></td>
       </tr>
     </table>
     <p class="note">A VirusTotal report is a dated snapshot, not a guarantee: engines
@@ -83,6 +83,16 @@
     <h2>Previous releases</h2>
     <table>
       <tr><th>File</th><th>Size</th><th>SHA-256</th></tr>
+      <tr>
+        <td><b>TidyDeck-0.6.1-win64.zip</b><br><span class="note">scanned 0/44 on November 7, 2026</span></td>
+        <td>12,032,934 bytes</td>
+        <td><code>d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6</code></td>
+      </tr>
+      <tr>
+        <td><b>TidyDeck-0.6.1.zip</b> (source)<br><span class="note">scanned 0/64 on November 7, 2026</span></td>
+        <td>470,144 bytes</td>
+        <td><code>422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8</code></td>
+      </tr>
       <tr>
         <td><b>TidyDeck-0.6.0-win64.zip</b><br><span class="note">scanned 0/70 on 04/11/2026</span></td>
         <td>11,710,802 bytes</td>
@@ -105,8 +115,8 @@
     verifiable.</p>
   </div>
 
-  <footer>TidyDeck 0.6.1 · GPL-3.0 · no telemetry, no hidden dependencies.
-  <span class="badge">build 2026-11-07</span></footer>
+  <footer>TidyDeck 0.6.2 · GPL-3.0 · no telemetry, no hidden dependencies.
+  <span class="badge">build 2026-11-20</span></footer>
 </main>
 </body>
 </html>

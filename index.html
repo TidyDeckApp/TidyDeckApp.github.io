@@ -202,22 +202,22 @@
 <section id="telecharger" aria-labelledby="t-dl">
   <div class="enveloppe">
     <h2 id="t-dl">Télécharger</h2>
-    <p class="intro">Version 0.6.1 pour Windows 10 et 11, construite le 7 novembre 2026. Aucun droit administrateur au démarrage.</p>
+    <p class="intro">Version 0.6.2 pour Windows 10 et 11, construite le 20 novembre 2026. Aucun droit administrateur au démarrage.</p>
     <div class="telecharger">
       <h3>1. Récupère le fichier</h3>
-      <p><a class="bouton" href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1-win64.zip">TidyDeck-0.6.1-win64.zip</a></p>
+      <p><a class="bouton" href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.2/TidyDeck-0.6.2-win64.zip">TidyDeck-0.6.2-win64.zip</a></p>
       <p>Une fois l'empreinte vérifiée (étape 2), décompresse le dossier <code>TidyDeck</code> où tu veux (par exemple <code>C:\TidyDeck</code>) et double-clique sur <code>TidyDeck.exe</code>. Pour le retirer : supprime le dossier.</p>
 
       <h3>2. Vérifie que le fichier est intact</h3>
-      <p><code>TidyDeck-0.6.1-win64.zip</code> (12&nbsp;032&nbsp;934 octets). Empreinte SHA-256 attendue :</p>
-      <pre class="empreinte"><code>d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6</code></pre>
+      <p><code>TidyDeck-0.6.2-win64.zip</code> (12&nbsp;046&nbsp;659 octets). Empreinte SHA-256 attendue :</p>
+      <pre class="empreinte"><code>669cdf877344dc7724c133459bd054abab2df7939890a5c2da9c3b4ee4916cd0</code></pre>
       <p>Pour cette étape, laisse le zip dans ton dossier <strong>Téléchargements</strong> (son vrai nom reste <code>Downloads</code>, même en français). Ouvre le menu Démarrer, tape <code>cmd</code>, fais Entrée, puis colle cette ligne et fais Entrée :</p>
-      <pre><code>certutil -hashfile "%USERPROFILE%\Downloads\TidyDeck-0.6.1-win64.zip" SHA256</code></pre>
+      <pre><code>certutil -hashfile "%USERPROFILE%\Downloads\TidyDeck-0.6.2-win64.zip" SHA256</code></pre>
       <p>La ligne du milieu doit correspondre à l'empreinte ci-dessus. Si le résultat est différent, n’ouvre pas le fichier.</p>
-      <p>Archive du code source : <a href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.1/TidyDeck-0.6.1.zip">TidyDeck-0.6.1.zip</a> (470&nbsp;144 octets), empreinte attendue <code>422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8</code>.</p>
+      <p>Archive du code source : <a href="https://github.com/TidyDeckApp/TidyDeckApp/releases/download/v0.6.2/TidyDeck-0.6.2.zip">TidyDeck-0.6.2.zip</a> (485&nbsp;744 octets), empreinte attendue <code>2feb56baa9bb84ae4316699ef03c3194c5df966f6d70c7eb94247e374195579e</code>.</p>
 
       <h3>3. Regarde l'analyse antivirus</h3>
-      <p>VirusTotal, analyse du 7 novembre 2026 : <b>0 moteur sur 44</b> pour le win64 (<a href="https://www.virustotal.com/gui/file/d53bd12accc0f8432fcfb9b099a5c8c1d0f1518db9a80fd22d402f67a56d41c6/detection" rel="noopener">rapport</a>) et <b>0 moteur sur 64</b> pour l'archive source (<a href="https://www.virustotal.com/gui/file/422ae870fe75fa116c04827a73c149405e31c7bef5cf6f252e8b8205714669b8/detection" rel="noopener">rapport</a>). Détails sur <a href="analyse-antivirus.html" target="_blank">l'analyse antivirus</a>.</p>
+      <p>VirusTotal, analyse du 20 novembre 2026 : <b>0 moteur sur 63</b> pour le win64 (<a href="https://www.virustotal.com/gui/file/669cdf877344dc7724c133459bd054abab2df7939890a5c2da9c3b4ee4916cd0/detection" rel="noopener">rapport</a>) et <b>0 moteur sur 64</b> pour l'archive source (<a href="https://www.virustotal.com/gui/file/2feb56baa9bb84ae4316699ef03c3194c5df966f6d70c7eb94247e374195579e/detection" rel="noopener">rapport</a>). Détails sur <a href="analyse-antivirus.html" target="_blank">l'analyse antivirus</a>.</p>
       <p>Un score est une photo à un instant donné, pas une garantie. C'est pour cela que le code est ouvert.</p>
 
       <h3>Un avertissement de Windows ?</h3>
@@ -229,6 +229,15 @@
 <section aria-labelledby="t-nouveautes">
   <div class="enveloppe texte-etroit">
     <h2 id="t-nouveautes">Nouveautés</h2>
+    <h3 style="margin:0 0 8px;font-size:20px;color:var(--marine)">0.6.2 — publiée le 20 novembre 2026</h3>
+    <ul class="liste-nette">
+      <li><strong>Rappels, une notification par rappel.</strong> Chaque rappel (hydratation, repas, snacks, pause visuelle, étirements, créneaux personnalisés) règle son <strong>Son</strong>, son <strong>Visuel</strong>, les deux ou aucun. Un lien « Appliquer à tous les rappels » reprend un réglage pour toute la page.</li>
+      <li>Un <strong>bandeau</strong> en haut de la page Rappels te rappelle que TidyDeck doit rester ouvert, même réduit, pour te prévenir.</li>
+      <li><strong>Mode Discret</strong> : il masque ce que TidyDeck affiche (nom d'utilisateur, nom du PC, chemins personnels), pas les autres applications. Le libellé le dit clairement.</li>
+      <li><strong>Confidentialité</strong> : le nom du PC est masqué dans <code>debug.log</code>.</li>
+      <li><strong>Fichiers et résidus</strong> : protections renforcées (dossiers de sauvegardes et de données, fichiers <code>.bak</code>). Seul le premier niveau sous une zone est proposé. Rien n'est supprimé.</li>
+      <li><strong>Mise en page</strong> : en fenêtre étroite, les textes et cases ne sont plus coupés.</li>
+    </ul>
     <h3 style="margin:0 0 8px;font-size:20px;color:var(--marine)">0.6.1 — publiée le 7 novembre 2026</h3>
     <ul class="liste-nette">
       <li>Disponible en anglais, en entier.</li>
